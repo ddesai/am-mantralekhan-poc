@@ -1,0 +1,257 @@
+	
+<!DOCTYPE html>
+<html id="htmlid" class="min-width-320px min-width-480px min-width-768px min-width-1024px">
+
+	<head>		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta charset="utf-8">
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css" />  
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/fonticons/flaticon.css"/>
+        <script src="phonegap.js" type="text/javascript"></script>
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.0.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+     
+	  
+	</head>
+    <body >
+    <div data-role="page"  id="help-page" class="noshadow ui-nosvg"  data-theme="a">
+      
+    
+    <style>
+.ui-support{position:fixed;left:0;right:0;top:0;bottom:0;z-index:999;background:transparent;display:none}
+.mantra-bg{display:none}			
+.portrait  .mantra-bg-vertical{display:block}				
+.landscape .mantra-bg-horizontal{display:block}
+.landscape.right .mantra-bg-horizontal-right{display:block}	
+
+.bgs{position:relative;}
+.bgs img{position:absolute;left:0;right:0;top:73px;margin:auto;}	
+
+
+.charactor-txt {
+    color: #E8A848;
+    font-weight: bold !important;
+    text-shadow: 0 0 1px #FFFFFF !important;
+    transition: color 1s ease 0s;
+}
+
+
+.charactor-txt.active{
+	color:#b90404;
+}
+								
+
+
+.mantra-btn img{
+	max-width:100%
+}
+.mantra-btn .charactor-btn{
+	display:none;
+}
+
+.mantra-btn .charactor-btn.active {
+    color: #78014F;
+    display: block;   
+}
+
+.portrait .ui-mantra-charactor{
+	
+}
+
+
+
+.ui-cus-header{
+    background: #f7c270 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6) !important;
+    left: 0;
+    margin-top: -1px;
+    min-height: 43px;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+}
+
+.summary {
+    background: none repeat scroll 0 0 rgba(253, 210, 136, 0.4);
+    color: #9C5C21;
+    font-size: 12px;
+    padding: 7px 15px;
+    position: fixed;
+    text-align: left;
+    top: 43px;
+    width: 100%;
+    z-index: 1;
+}
+.portrait .work-area {
+    top: 85%;  
+    position: absolute;
+    width: 100%;
+}
+.portrait .mantra-btn{
+	width:30%;
+	margin:auto;
+}
+.portrait .charactor-txt {    
+    font-size: 9vw;
+}
+
+.landscape .work-area {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    width: 50%;
+}
+
+.landscape.right .work-area {
+    left: 0;
+}
+
+.landscape .mantra-btn {
+    margin: auto;
+    width: 40%;
+}
+
+.landscape .charactor-txt {    
+    font-size: 5vw;
+}
+
+.portrait .landscape-show{
+	display:none
+}
+
+.landscape .landscape-show{
+	display:block
+}
+.ui-btn-active{
+	background:#98500e !important;
+	border:none !important;
+}
+
+@media only screen and (min-width : 320px) {	
+	.portrait .mantra-btn { 
+		width: 25%;
+	}	
+	.portrait .charactor-txt {
+		font-size: 19px;
+	}
+	.landscape .charactor-txt {
+		font-size: 23px;
+	}	
+}
+@media only screen and (min-width : 360px) {	
+	.portrait .mantra-btn { 
+		width: 30%;
+	}
+	.portrait .charactor-txt {
+		font-size: 28px;
+	}
+	.landscape .charactor-txt {
+		font-size: 25px;
+	}	
+}
+@media only screen and (min-width : 480px) {	
+	.portrait .mantra-btn { 
+		width: 30%;
+	}
+	.portrait .charactor-txt {
+		font-size: 28px;
+	}
+	.landscape .charactor-txt {
+		font-size: 25px;
+	}
+}
+@media only screen and (min-width : 767px) {
+	.portrait .mantra-btn { 
+		width: 25%;
+	}
+	.bgs img{
+		top:10px;
+	}
+	.portrait .charactor-txt {
+		font-size: 70px;
+	}
+	.landscape .charactor-txt {
+		font-size:54px;
+	}
+}
+
+@media only screen and (min-width : 1024px) {	
+	.landscape .work-area {
+		top:38%;
+	}
+}
+
+.ui-input-text{margin:0}
+
+.keyboard-mantra{text-transform:uppercase;position:absolute;padding:0.4em !important}
+.charactor-support-txt{color:#E8A848;}
+.charactor-txt{color:#b90404;}							
+
+.ui-input-text{border:none}
+
+.keyboard-password {
+    text-indent: -9999px;
+	transition:all 2s;
+	background:transparent;	
+}
+
+.ui-input-text input, .ui-input-search input, textarea.ui-input-text{
+	padding:0.2em;
+}
+.ui-input-text input, .ui-input-search input{
+	min-height:1.2em;
+}
+
+.ui-mantra-charactor.active{
+	position:fixed;
+	left:1px;
+	right:1px;
+	top:75px;
+}
+li{
+	margin-bottom:9px;
+}
+    </style>	
+    
+    <div class="ex-loader ui-corner-all ui-body-a ui-loader-default">
+        <span class="ui-icon-loading"></span>
+    </div>
+
+ 
+    <div class="ui-support"></div> 
+    
+   
+  <div data-role="header" class="ui-cus-header">
+  	<h1 class="ui-btn-left" style="color:#b15f25;width:85%;text-align:left">
+    <a href="javascript: revert();"  style="text-decoration:none;color:#b15f25;">	<img src="css/images/left-arrow.png" style="vertical-align:middle;"/> Help  Swaminarayan Mahamantra Lekhan</a> 
+    </h1>     
+  
+  </div> 
+ 
+      
+  
+   
+
+    
+	<div class="ui-content" id="mantralekhan-content-help" role="main" data-role="content" style="text-align: left;margin-top:43px;padding:10px">
+	  	<ul style="padding:0 20px;margin:0; line-height:1.3;  text-align:justify;">
+<li>You can perform Mantra lekhan by selecting either the Tapping or Typing option from the Menu.</li>
+
+<li>You can play Swaminarayan Dhun by tapping on the play button in the bottom right corner of the screen.</li>
+
+<li>In horizontal view, you can position the Tapping Button either on the Left or Right.</li>
+
+<li>When app is opened upon availability of internet, your mantra count will update automatically.</li>
+
+<li>If you clear app data or uninstall the app from your device, the un-synchronized data will be lost.</li>
+         </ul>
+	</div>
+    
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+body.ui-mobile-viewport, div.ui-mobile-viewport{        
+	background:#ffdb96;
+}
+
+body, * {    
+    text-shadow: none !important;
+    box-shadow: none !important; 
+    border-radius: 0 !important;
+    font-weight: normal !important; 
+	font-family:arial;  
+}
+
+.ui-loader-default{display: none;border-radius: 50% !important;}
+
+img{max-width:100%}
+
+.ui-page-theme-a .glyph-icon.ui-btn {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    box-shadow: none;
+    padding: 3px;
+}
+[class^="flaticon- "]:before, [class*="flaticon- "]:before, [class^="flaticon- "]:after, [class*="flaticon- "]:after {
+    font-size: 15px !important;
+}
+
+#index-page{
+    background: white;          
+}
+
+.ui-content{padding:0;}
+
+#mantralekhan-page, #about-page, #help-page{
+     background:#ffdb96;
+            
+}
+
+
+.ui-login .ui-btn,.ui-login .ui-btn:hover {
+    background: none repeat scroll 0 0 #636CAA;
+    border: medium none;
+    color: #FFFFFF;
+    font-size: 20px;
+    margin: 0;
+}
+
+.ui-login .ui-input-text input{
+    background-color:white;          
+    font-size: 15px;
+    margin: 0;    
+    padding: 5px 5px 5px 10px;        
+}
+
+/*.ui-login  .ui-input-text .ui-input-username {
+    background-image: url("images/icons-png/user-black.png");
+    background-position: 0;
+    background-repeat: no-repeat;
+}
+
+.ui-login  .ui-input-text .ui-input-password {
+    background-image: url("images/icons-png/lock-black.png");
+    background-position:0;
+    background-repeat: no-repeat;
+}*/
+
+.ui-grid-a{text-align: left;}
+
+
+
+
+.ui-big-no{font-size:25px;color:#b0a66d;text-align: left;}
+.ui-big-no small{font-size:12px;display: block;text-transform:uppercase}
+
+.ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a{}
+
+
+.ui-mantra .ui-input-text {border:none;background:transparent;}
+.ui-mantra .ui-input-text input {
+    border: 1px solid #6F050B;
+    bottom: 10px;
+    color: #BB0000;
+    font-size: 28px;
+    left: 50%;
+    margin-left: -110px;
+    min-height: 50px;
+    padding: 0 10px !important;
+    position: absolute;
+    text-align: left;
+    text-transform: capitalize;
+    width: 214px;
+}
+.ui-mantra  .ui-input-text .support{color:rgba(255,255,255,0.5);background: #e79844;}
+
+.ui-bar-b{background:transparent;border:none}
+
+.ui-header .ui-title {
+    color: #C1BC9D;
+    display: block;
+    float: left;
+    font-size: 16px;
+    margin: 0;
+    outline: 0 none !important;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+	padding:0;
+}
+
+.ui-content{overflow-x:visible}
+.ui-mobile .ui-page-active{overflow:hidden}
+
+.dropdown-menu {
+    display: none;    
+    position: absolute;
+    right: 0;
+    top: 43px; 
+    z-index: 9;
+}
+.dropdown-menu .ui-icon-carat-r:after {
+    background-image: none;
+}
+.dropdown-menu .ui-btn-icon-right:after {
+    background: none repeat scroll 0 0 transparent;
+}
+.menu-outer {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+.dropdown-menu .ui-btn {
+    background: none repeat scroll 0 0 #FFFFFF !important;
+    border-bottom: 1px solid #DDDDDD !important;
+    border-top: medium none !important;
+    color: #000000 !important;
+    font-size: 18px !important;
+}
+.dropdown-menu .ui-btn:focus,.dropdown-menu .ui-btn:hover{
+	background: none repeat scroll 0 0 #b55f10;
+	color:#fcc065;
+}
+.ui-listview > .ui-li-static.ui-last-child, .ui-listview > .ui-li-divider.ui-last-child, .ui-listview > li.ui-last-child > a.ui-btn{
+	border-bottom:none
+}
+.ui-icon-loading{
+	border-radius:50% !important;	
+}
+.ui-loader-default{
+	position:fixed;
+}

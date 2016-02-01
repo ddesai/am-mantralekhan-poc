@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+<html id="htmlid" class="min-width-320px min-width-480px min-width-768px min-width-1024px">
+
+	<head>		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta charset="utf-8">
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css" />  
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/fonticons/flaticon.css"/>
+        <script src="phonegap.js" type="text/javascript"></script>
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.0.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+     	  <script>
+        var my_media = null;
+        var mediaTimer = null;
+        var flag=0; 
+        function playAudio(src) {
+			flag=1;	
+            my_media = new Media(src, onSuccess, onError);
+			my_media.play();
+			setInterval(function() {
+				if(flag==1){
+					my_media.stop();
+		            my_media.play();
+				}
+			},60000);
+        }
+
+        // Pause audio
+        //
+        function pauseAudio() {
+            if (my_media) {
+                my_media.pause();
+				flag=0;	
+            }
+        }
+
+        // Stop audio
+        //
+        function stopAudio() {
+            if (my_media) {
+                my_media.stop();
+            }
+            clearInterval(mediaTimer);
+            mediaTimer = null;
+        }
+
+        // onSuccess Callback
+        //
+        function onSuccess() {
+           // console.log("playAudio():Audio Success");
+        }
+
+        // onError Callback
+        //
+        function onError(error) {
+         
+        }
+	  </script>
+
+	  
+	</head>
+    <body >
+    <div data-role="page"  id="mantralekhan2-page" class="noshadow ui-nosvg"  data-theme="a">
+      
+    
+    <style>
+.ui-support{position:fixed;left:0;right:0;top:0;bottom:0;z-index:999;background:transparent;display:none}
+.mantra-bg{display:none}			
+.portrait  .mantra-bg-vertical{display:block}				
+.landscape .mantra-bg-horizontal{display:block}
+.landscape.right .mantra-bg-horizontal-right{display:block}	
+
+.bgs{position:relative;}
+.portrait .bgs img{position:absolute;left:0;right:0;margin:auto;top:95px;}	
+.landscape .bgs img{position:absolute;left:0;right:0;margin:auto;top:72px;}	
+
+
+.charactor-txt {
+    color: #E8A848;
+    font-weight: bold !important;
+    text-shadow: 0 0 1px #FFFFFF !important;
+    transition: color 1s ease 0s;
+}
+
+
+.charactor-txt.active{
+	color:#b90404;
+}
+								
+
+
+.mantra-btn img{
+	max-width:100%
+}
+ 
+
+.portrait .ui-mantra-charactor{
+	
+}
+
+
+
+.ui-cus-header{
+    background: #f7c270 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6) !important;
+    left: 0;
+    margin-top: -1px;
+    min-height: 43px;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+}
+
+.summary {
+    background: none repeat scroll 0 0 rgba(253, 210, 136, 0.4);
+    color: #9C5C21;
+     font-size: 18px;
+    padding: 4px 15px;
+    position: fixed;
+    text-align: left;
+    top: 43px;
+    width: 100%;
+    z-index: 1;
+}
+.portrait .work-area {
+    position: fixed;
+    top: 70px;
+    width: 100%;
+}
+.portrait .mantra-btn{
+	width:30%;
+	margin:auto;
+}
+.portrait .charactor-txt {    
+    font-size: 9vw;
+}
+
+.landscape .work-area {
+    position: fixed;
+    right: 0;
+    top: 73px;
+    width: 100%;
+}
+
+.landscape.right .work-area {
+    left: 0;
+}
+
+.landscape .mantra-btn {
+    margin: auto;
+    width: 40%;
+}
+
+.landscape .charactor-txt {    
+    font-size: 5vw;
+}
+
+.portrait .landscape-show{
+	display:none
+}
+
+.landscape .landscape-show{
+	display:block
+}
+.ui-btn-active{
+	background:#98500e !important;
+	border:none !important;
+}
+
+@media only screen and (min-width : 320px) {	
+	.portrait .mantra-btn { 
+		width: 25%;
+	}	
+	.portrait .charactor-txt {
+		font-size: 19px;
+	}
+	.landscape .charactor-txt {
+		font-size: 23px;
+	}	
+}
+@media only screen and (min-width : 360px) {	
+	.portrait .mantra-btn { 
+		width: 30%;
+	}
+	.portrait .charactor-txt {
+		font-size: 28px;
+	}
+	.landscape .charactor-txt {
+		font-size: 25px;
+	}	
+}
+@media only screen and (min-width : 480px) {	
+	.portrait .mantra-btn { 
+		width: 30%;
+	}
+	.portrait .charactor-txt {
+		font-size: 28px;
+	}
+	.landscape .charactor-txt {
+		font-size: 25px;
+	}
+}
+@media only screen and (min-width : 767px) {
+	.portrait .mantra-btn { 
+		width: 25%;
+	}
+	.portrait .charactor-txt {
+		font-size: 70px;
+	}
+	.landscape .charactor-txt {
+		font-size:54px;
+	}
+}
+
+@media only screen and (min-width : 1024px) {	
+	
+}
+
+.ui-input-text{margin:0;border:none;}
+
+.keyboard-mantra{text-transform:uppercase;padding:0.1em 0.4em !important;position:absolute}
+.charactor-support-txt{color:#E8A848;}
+.charactor-txt{color:#b90404;}							
+
+
+.keyboard-password {    
+	background:transparent !important;
+	text-indent:-9999px;	
+}
+
+.ui-input-text input, .ui-input-search input, textarea.ui-input-text{
+	padding:0.2em;
+}
+.ui-input-text input, .ui-input-search input{
+	min-height:1.2em;
+}
+
+.ui-mantra-charactor{
+	transition:all 1s;
+}
+
+
+.ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a{
+	background:transparent;
+}
+
+#realbox{
+	color:#b90404;
+}
+
+    </style>	
+
+
+<script>
+	$(document).ready(function(){	
+		setScreen();	
+		setCounter(); 	
+		$(window).resize( function(){          			
+			setScreen();  			
+		});
+		setTimeout(function(){
+			$.post("http://anoopam.org/mantralekhan/submit.php",{action:'getcounter',mid:localStorage.getItem('AMID')},function(data) {
+					var res=JSON.parse(data);	
+					if(res['STATUS']=='SUCCESS')
+					{
+						localStorage.setItem('AMCOUNTER',res['counter']);
+					}
+			});															
+			$("#name").html(localStorage.getItem('AMFIRST')+' '+localStorage.getItem('AMLAST'));	
+			if(localStorage.getItem('CRCNT')!=undefined)
+			{
+				$("#total").html( Number(localStorage.getItem('AMCOUNTER'))+ Number(localStorage.getItem('CRCNT')) );
+			}else{
+				$("#total").html( Number(localStorage.getItem('AMCOUNTER')) );
+			}
+		},1500);
+		setInterval(function() {
+				setCounter(); 
+		},60000);	
+	});
+	
+	function checkText(value){
+		var str='SWAMINARAYAN';  
+		
+		  var match=value.toUpperCase();  
+		
+		  if(str.indexOf(match)==0){
+				 if(str==match){       
+				 	setTimeout(function(){ 
+						var curcnt= localStorage.getItem('CRCNT');
+						localStorage.setItem('CRCNT',Number(curcnt)+1);
+						if (localStorage.total)
+						{
+						  localStorage.total=Number(localStorage.total)+1;
+						}
+						else
+						{
+						  localStorage.total=1;
+						}					
+						$('#focusing').val('');
+						$('#realbox').val(''); 
+						$('#total').text( Number($("#total").html()) + 1);
+					},130);	
+				 }
+			}
+			else{   
+				while(str.indexOf(match)!='0' && str.indexOf(match)!=''){								   															;
+					$('#focusing').val(match.replace(/(\s+)?.$/, ''));
+					$('#realbox').val($('#focusing').val());
+					 match=$('#focusing').val();
+					 
+				}
+						
+			}							
+	}
+	document.addEventListener("pause", onPause, false);
+	function onPause() {
+		 stopDhun();
+	}
+	document.addEventListener("resume", onResume, false);
+	function onResume() {
+		 stopDhun();
+		  /////////////////////////////////////////////
+			 $.post("http://anoopam.org/mantralekhan/submit.php",{action:'getcounter',mid:localStorage.getItem('AMID')},function(data) {
+					var res=JSON.parse(data);	
+					if(res['STATUS']=='SUCCESS')
+					{
+						localStorage.setItem('AMCOUNTER',res['counter']);
+					}
+			});															
+			if(localStorage.getItem('CRCNT')!=undefined)
+			{
+				$("#total").html( Number(localStorage.getItem('AMCOUNTER'))+ Number(localStorage.getItem('CRCNT')) );
+			}else{
+				$("#total").html( Number(localStorage.getItem('AMCOUNTER')) );
+			}
+			/////////////////////////////////////////////
+	}	
+ 
+</script>
+    
+    <div class="ex-loader ui-corner-all ui-body-a ui-loader-default">
+        <span class="ui-icon-loading"></span>
+    </div>
+
+    <div style="bottom: 10px; color: rgb(152, 80, 14); background: none repeat scroll 0% 0% rgb(247, 194, 112); border: 1px solid white; z-index: 99999; width: 40px; text-shadow: 1px 0px 1px rgb(255, 255, 255); right: 10px; position: absolute; line-height: 40px; height: 40px; border-radius: 50% ! important; box-shadow: 0px 0px 7px rgb(152, 80, 14) ! important;text-align:center">
+    
+    <div class="glyph-icon flaticon-media12" onClick="playDhun();" ></div>
+     <div class="glyph-icon flaticon-media11" onClick="stopDhun();"  style="display:none"></div>
+</div>
+ 
+    <div class="ui-support"></div> 
+    
+   
+  <div data-role="header" class="ui-cus-header">
+  	<h1 class="ui-btn-left" style="color:#b15f25;width:85%;text-align:left">
+    	<img src="css/images/header-logo.png" style="vertical-align:middle"/>   Swaminarayan Mahamantra Lekhan
+    </h1>     
+    
+	<a href="#" onClick="toggleMenu()" class="ui-btn-right" id="ui-icon-bars" style="padding:0;background:transparent;border:none"> 
+    	<img src="css/images/menu-icon.png"/> 
+    </a> 
+     <ul class="dropdown-menu" data-role="listview" style="background:#98500e;">
+        <li><a href="mantralekhan.html" rel="external">Tap</a></li>
+        <li><a style="background:#bb6428 !important;color:white !important" href="mantralekhan2.html"  rel="external" id="bykeyboard">Type</a></li>
+        <li><a href="help.html"> Help </a></li>	
+        <li><a href="aboutus.html"> About </a></li>	
+        <li><a href="#"  onClick="Logout();"> Logout </a></li>
+        <li><a href="#"  onClick="javascript: navigator.app.exitApp();"> Exit </a></li>
+    </ul>                      
+    
+  </div> 
+ 
+ 
+  
+  	 <div class="summary">
+     	<span id="name"></span>  (Total Mantra <span id="total"><img src="img/ajax-loader.gif" width="15" /></span>)       
+     </div>       
+
+
+
+
+        
+  
+   
+
+    
+	<div class="ui-content" id="mantralekhan-content-keyboard" role="main" data-role="content" style="text-align: center;">
+    	
+   <div class="bgs">
+   		 <img src="css/images/mantra-bg.png" class="mantra-bg mantra-bg-horizontal"/>
+   		 <img src="css/images/mantra-bg-vertical.png" class="mantra-bg-vertical mantra-bg"/>
+         <img src="css/images/mantra-bg-right.png" class="mantra-bg-horizontal-right mantra-bg"/>        
+   </div>
+   
+   
+   <div class="work-area">
+        <div class="ui-mantra-charactor">
+                <input  class="charactor-txt keyboard-mantra" type="text" value="Swaminarayan" style="color:#E8A848;background:#F7C270" readonly="true"/>
+                <input  class="charactor-txt keyboard-mantra"  type="text"   id="realbox"/>
+                
+                <input  class="charactor-txt keyboard-mantra keyboard-password" onKeyUp="updateText(this.value);checkText(this.value);"  type="password"  id="focusing"/>                                                
+        </div>
+        	       
+        
+      </div>  
+                       
+	</div>
+    
+
+
+</div>
+
+</body>
+</html>

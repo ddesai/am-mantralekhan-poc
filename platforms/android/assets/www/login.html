@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="min-width-320px min-width-480px min-width-768px min-width-1024px">
+	<head>			
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta charset="utf-8">
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css" />  
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/fonticons/flaticon.css"/>
+        
+         <script src="phonegap.js" type="text/javascript"></script>
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.0.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+       
+
+         <script>
+document.addEventListener("backbutton", onBackKeyDown, false);
+function onBackKeyDown() {
+    navigator.app.exitApp();
+}
+		 </script>
+       
+       <style>
+			img{max-width:60%;margin:auto}
+
+.login-bg{display:none}			
+.portrait  .login-bg-vertical{display:block}				
+.landscape .login-bg-horizontal{display:block}
+
+.portrait .ui-login{
+	position:absolute;top:50%;height:150px;margin-top:-120px;left:30px;right:30px;
+}			
+.landscape .ui-login{
+	position:absolute;top:50%;height:150px;margin-top:-100px;left:30px;right:30px;
+}	
+
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{
+	background:white;
+}		
+
+
+			@media only screen and (min-width : 320px) {	
+					
+			}
+			@media only screen and (min-width : 360px) {	
+				
+			}
+			@media only screen and (min-width : 480px) {	
+				
+			}
+			@media only screen and (min-width : 767px) {
+				
+			}
+			
+
+       </style> 
+	</head>
+    <body >
+    <div data-role="page"  id="login-page" class="noshadow ui-nosvg"  data-theme="a">
+    
+    <div class="ex-loader ui-corner-all ui-body-a ui-loader-default">
+        <span class="ui-icon-loading"></span>
+    </div>
+
+    
+	<div class="ui-content" id="index-content" role="main" data-role="content" style="text-align: center;">
+      
+      <div class="table">
+       	
+          	<img src="css/images/login-header.png" class="login-bg login-bg-vertical" style="position:absolute;left:0;right:0;top:10px"/>       
+          
+            
+<img src="css/images/login-header-landscape.png" class="login-bg login-bg-horizontal" style="position:absolute;left:0;right:0;top:10px;max-width:90%"/>							        
+         
+          <div class="ui-login">  
+          
+            <form>
+                <input type="text" class="ui-input-username" name="username" id="email" value="" placeholder="Email"/>   
+                 <input type="password" class="ui-input-password" name="password" id="pass" value="" placeholder="Password"/>           
+                <input type="button" name="login" value="Sign in" onClick="ConnectLogin();"/>
+            </form>
+            <br/>
+            <p style="text-align:center;padding:10px;">
+            <a onClick="navigator.app.loadUrl('http://anoopam.org/mantralekhan/index.php?reg=a', { openExternal:true });"  style="text-decoration:none">Sign Up</a> | <a  style="text-decoration:none" onClick="navigator.app.loadUrl('http://anoopam.org/mantralekhan/index.php?forget=a', { openExternal:true });" >Forgot Password</a> 
+            </p>
+        </div>
+       
+       </div>     
+            
+	</div>
+    
+
+
+</div>
+
+</body>
+</html>
